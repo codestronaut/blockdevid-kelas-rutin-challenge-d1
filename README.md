@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+# Smart Contracts with Solidity Exploration
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+### Challenges
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+- DigitalWalletCampus: https://testnet.monadexplorer.com/address/0x7D705c0501788ce379d9F1e23EaCec0e7351a9Cd
+- AcademicSystem: https://testnet.monadexplorer.com/address/0x3d52aA4B9F7F79c4ee32A071d9AA14B3D17cBc5D
+- BEMVoting: https://testnet.monadexplorer.com/address/0xEF09143a0b01e7B325Ea68Ff0D93e545Cd38355E
