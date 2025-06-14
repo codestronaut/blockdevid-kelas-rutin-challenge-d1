@@ -11,3 +11,4 @@
 #### Day-2
 
 - CampusCredit: [View Contract](https://testnet.monadexplorer.com/address/0xbf250A40EDF58d3DfF9bD3e8F6868Ceae59250d5)
+![Highlighted flow demo](https://raw.githubusercontent.com/codestronaut/blockdevid-kelas-rutin-challenges/refs/heads/main/docs/ERC-20-Challenge-Demo.png)
