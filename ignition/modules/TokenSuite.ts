@@ -5,9 +5,9 @@ module.exports = buildModule("TokenSuiteModule", (m) => {
   // Initial treasury: 10000000 CCR
   const campusCredit = m.contract("CampusCredit", ["10000000"]);
 
-  // Setup initial configurations.
+  // ERC-20: CampusCredit: Setup initial configurations.
 
-  // Merchants.
+  // ERC-20: CampusCredit: Merchants.
   const registerMerchant1 = m.call(
     campusCredit,
     "registerMerchant",
@@ -29,7 +29,7 @@ module.exports = buildModule("TokenSuiteModule", (m) => {
     { id: "registerMerchant3", after: [registerMerchant2] }
   );
 
-  // Students.
+  // ERC-20: CampusCredit: Students.
   const mint1 = m.call(
     campusCredit,
     "mint",
@@ -63,5 +63,50 @@ module.exports = buildModule("TokenSuiteModule", (m) => {
   //     }
   //   );
 
-  return { campusCredit };
+  // Deploy ERC-721: StudentID.
+  const studentId = m.contract("StudentID");
+
+  // ERC-721: StudentID: Setup initial configurations.
+
+  // ERC-721: StudentID: Students.
+  m.call(
+    studentId,
+    "issueStudentID",
+    [
+      "0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2",
+      "1103184090",
+      "Aditya",
+      "Computer Engineering",
+      "Sample URI 1",
+    ],
+    { id: "issueStudentID1" }
+  );
+
+  m.call(
+    studentId,
+    "issueStudentID",
+    [
+      "0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db",
+      "1103184085",
+      "Adine",
+      "Computer Engineering",
+      "Sample URI 2",
+    ],
+    { id: "issueStudentID2" }
+  );
+
+  m.call(
+    studentId,
+    "issueStudentID",
+    [
+      "0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB",
+      "1103184175",
+      "Luce",
+      "Computer Engineering",
+      "Sample URI 3",
+    ],
+    { id: "issueStudentID3" }
+  );
+
+  return { campusCredit, studentId };
 });
